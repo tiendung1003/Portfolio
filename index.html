@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio | Phạm Tiến Dũng</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--bg-color); }
+        header { background-color: var(--primary-color); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 20px; }
+        nav h1 { font-size: 1.5rem; letter-spacing: 1px; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: var(--accent-color); }
+        .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
+        section { background: white; border-radius: 8px; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-bottom: 20px; }
+        .hero { display: flex; gap: 30px; align-items: center; }
+        .hero-content { flex: 2; }
+        .hero-img { flex: 1; text-align: center; }
+        .hero-img img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent-color); }
+        .skills-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+        .tag { background: var(--accent-color); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; }
+        .grid-projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #ddd; border-radius: 8px; padding: 20px; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+        .card h3 { color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem; }
+        .btn { display: inline-block; background: var(--accent-color); color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; margin-top: 15px; }
+        .btn:hover { background: #2980b9; }
+        .highlight-box { background-color: #e8f4f8; border-left: 4px solid var(--accent-color); padding: 15px; margin-top: 20px; font-style: italic; }
+        footer { text-align: center; padding: 20px; background: var(--primary-color); color: white; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Phạm Tiến Dũng</h1>
+        <ul>
+            <li><a href="#gioi-thieu">Giới thiệu</a></li>
+            <li><a href="#du-an">Dự án</a></li>
+            <li><a href="#tong-ket">Tổng kết</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <section id="gioi-thieu" class="hero">
+        <div class="hero-content">
+            <h2>Về Bản Thân</h2>
+            <p>Xin chào! Mình là <strong>Phạm Tiến Dũng</strong>, hiện là sinh viên khóa <strong>K70</strong> tại <strong>Trường Đại học Công nghệ - ĐHQGHN (VNU-UET)</strong>. Mình đam mê xây dựng các hệ thống phần mềm, kiến trúc ứng dụng thực tế và tối ưu hóa quy trình quản lý dự án.</p>
+
+            <div class="skills-tags">
+                <span class="tag">Java & JavaFX</span>
+                <span class="tag">MVC Architecture</span>
+                <span class="tag">Git & GitHub Actions</span>
+                <span class="tag">SQLite / JDBC</span>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Mục tiêu của Portfolio:</strong> Website này không chỉ để lưu trữ sản phẩm cá nhân, mà còn là minh chứng cho việc ứng dụng các kỹ năng số, từ quản lý dữ liệu, hợp tác trực tuyến, đến việc ứng dụng AI một cách sáng tạo và có trách nhiệm.
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="https://via.placeholder.com/200" alt="Ảnh chân dung">
+        </div>
+    </section>
+
+    <section id="du-an">
+        <h2>Các Bài Tập Thành Phần</h2>
+        <div class="grid-projects">
+            <div class="card">
+                <h3>Bài 1: Thao tác tệp tin và thư mục</h3>
+                <p>Trình bày cấu trúc thư mục tối ưu cho việc học tập và quản lý mã nguồn, kèm quy tắc đặt tên tệp chuẩn mực.</p>
+                <a href="#" class="btn">Xem chi tiết & Minh chứng</a>
+            </div>
+
+            <div class="card">
+                <h3>Bài 2: Tìm kiếm và đánh giá thông tin</h3>
+                <p>Sử dụng các toán tử tìm kiếm nâng cao để tra cứu tài liệu học thuật (toán học, lập trình) và bảng đánh giá độ tin cậy của nguồn tin.</p>
+                <a href="#" class="btn">Xem chi tiết & Minh chứng</a>
+            </div>
+
+            <div class="card">
+                <h3>Bài 3: Viết Prompt hiệu quả</h3>
+                <p>So sánh kết quả của Prompt cơ bản và Prompt cải tiến ứng dụng kỹ thuật Prompt Engineering trong các tác vụ học tập.</p>
+                <a href="#" class="btn">Xem chi tiết & Minh chứng</a>
+            </div>
+
+            <div class="card">
+                <h3>Bài 4: Hợp tác trực tuyến</h3>
+                <p>Minh chứng sử dụng công cụ quản lý dự án nhóm trực tuyến, cách chia nhánh, review code và phối hợp teamwork hiệu quả.</p>
+                <a href="#" class="btn">Xem chi tiết & Minh chứng</a>
+            </div>
+
+            <div class="card">
+                <h3>Bài 5: AI tạo sinh hỗ trợ sáng tạo</h3>
+                <p>Trưng bày các sản phẩm số (hình ảnh, tài liệu) được hoàn thiện với sự hỗ trợ của các công cụ AI tạo sinh.</p>
+                <a href="#" class="btn">Xem chi tiết & Minh chứng</a>
+            </div>
+
+            <div class="card">
+                <h3>Bài 6: AI có trách nhiệm</h3>
+                <p>Bộ nguyên tắc cá nhân về sử dụng AI có trách nhiệm, đảm bảo liêm chính học thuật và bảo vệ dữ liệu.</p>
+                <a href="#" class="btn">Xem chi tiết & Minh chứng</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tong-ket">
+        <h2>Tổng Kết & Cảm Nhận</h2>
+        <p>Quá trình xây dựng Digital Portfolio này là một trải nghiệm quý báu giúp mình hệ thống lại toàn bộ kiến thức kỹ năng số.</p>
+        <br>
+        <p><strong>Kiến thức quan trọng nhất:</strong> Cách thức tổ chức thông tin logic, làm việc nhóm hiệu quả trên môi trường mạng và hiểu rõ ranh giới đạo đức khi ứng dụng Trí tuệ nhân tạo.</p>
+        <br>
+        <p><strong>Thách thức:</strong> Việc kết nối các công cụ số lại với nhau để tạo ra một luồng làm việc (workflow) trơn tru đòi hỏi sự tỉ mỉ và tư duy hệ thống cao. Tuy nhiên, kết quả đạt được hoàn toàn xứng đáng với công sức bỏ ra.</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Phạm Tiến Dũng | VNU-UET K70. Dự án Nhập môn Công nghệ số.</p>
+</footer>
+
+</body>
+</html>
